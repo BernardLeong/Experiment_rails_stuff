@@ -1,0 +1,16 @@
+<h1>Edit products</h1>
+
+<%= form_for @product, url: {action: 'update'}, method: :put do |f| %>
+
+<%=f.label :product_name %>
+<%=f.text_field :name %>
+
+<%=f.label :product_description %>
+<%=f.text_field :description %>
+
+<%=f.label :product_amount %>
+<%=f.text_field :amount %>
+
+<%= f.submit%>
+
+<%end%>

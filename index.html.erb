@@ -1,0 +1,13 @@
+<h1> List of products</h1>
+
+<%@products.each do |product|%>
+    <h3><%= product.name%><h3>
+    <h3><%= product.description%><h3>
+    <h3><%= product.amount%><h3>
+    <h3><%= product.currency%><h3>
+            <div><%= link_to 'Edit existing product', edit_product_path(product) %></div>
+            <div><%= link_to 'Delete existing product', product_path(product), :confirm => "Are you sure?", :method => :delete%></div>
+            <div><%= link_to 'Display product', product_path(product), :method => :get%></div>
+<%end%>
+<div><%= link_to 'Create new product', new_product_path %></div>
+

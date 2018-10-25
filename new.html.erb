@@ -1,0 +1,24 @@
+<strong>Create Products</strong>
+
+<%= form_for @product , url: {action: 'create'} do |f| %>
+    Product name: 
+    <%= f.text_field :name ,placeholder: 'Product name'%>
+
+    <%= f.text_field :description ,placeholder: 'Product description'%>
+
+    <%= f.text_field :amount ,placeholder: 'Product amount'%>
+
+    <%= f.submit%>
+
+<%end%>
+
+
+
+
+
+
+
+
+
+
+
